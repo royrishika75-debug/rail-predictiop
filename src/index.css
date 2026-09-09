@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #070B12;
+    --bg-panel: #0B111D;
+    --bg-panel-header: #0F1726;
+    --border-main: #182335;
+    --border-subtle: #121A28;
+    --text-primary: #E2E8F0;
+    --text-muted: #64748B;
+    --text-data: #94A3B8;
+  }
+
+  html,
+  body,
+  #root {
+    color: #E2E8F0;
+    background-color: #070B12;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #1E293B transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #182335;
+    border-radius: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2A3B54;
+  }
+}
+
+/* Operations Typography Classes */
+.font-display {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-data,
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-feature-settings: 'zero' 1, 'tnum' 1;
+}
+
+.font-body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+/* Operational Panel & Table Utility Styles */
+.ops-panel {
+  background-color: #0B111D;
+  border: 1px solid #182335;
+}
+
+.ops-panel-header {
+  background-color: #0E1624;
+  border-bottom: 1px solid #182335;
+}
+
+.ops-row {
+  border-bottom: 1px solid #121A28;
+}
+
+.ops-row:hover {
+  background-color: #0E1626;
+}
+
+/* Subtle operational pulse for live status */
+@keyframes subtle-live-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.pulse-dot {
+  animation: 2s ease-in-out infinite subtle-live-pulse;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* Remove default focus rings in favor of crisp borders */
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: none;
+}

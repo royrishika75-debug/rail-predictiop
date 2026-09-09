@@ -1,0 +1,123 @@
+pages/WhatIfSimulator.tsx`,UB=[{id:`weather`,label:`Weather Impact`,min:0,max:100,default:40,unit:``},{id:`congestion`,label:`Downstream Congestion`,min:0,max:100,default:65,unit:``},{id:`junction`,label:`Junction Load`,min:0,max:100,default:35,unit:``},{id:`restriction`,label:`Speed Restriction`,min:0,max:100,default:50,unit:``},{id:`delay`,label:`Current Delay`,min:0,max:60,default:18,unit:` min`}],WB=[`Khammam`,`Warangal`,`Kazipet`,`Secunderabad`],GB=[2,6,11,15];
+
+function KB(e){
+let t=e.weather/100*.15+e.congestion/100*.35+e.junction/100*.2+e.restriction/100*.2+e.delay/60*.1;return GB.map(e=>Math.round(e*(.5+t*1.5)))}
+
+function qB({children:e,className:t=``}){return
+  jsxDEV(`div`,{className:`bg-[#0C1526] border border-[#1A2840] rounded-lg ${t}`,children:e},
+  // {fileName:X,lineNumber:36,columnNumber:10},this)}
+
+function JB(){let[e,t]=(0,b.useState)(Object.fromEntries(UB.map(e=>[e.id,e.default]))),[n,r]=(0,b.useState)(!1),[i,a]=(0,b.useState)(GB),o=i[i.length-1];`${(19+o).toString().padStart(2,`0`)>`60`?`${Math.floor(o/60)}:${(o%60).toString().padStart(2,`0`)}`:(19+o).toString().padStart(2,`0`)}`;
+let s=1159+o,c=`${Math.floor(s/60)}:${(s%60).toString().padStart(2,`0`)}`,l=WB.map((e,t)=>({name:e,baseline:GB[t],scenario:i[t]}));return
+  jsxDEV(`div`,{className:`p-6 max-w-7xl mx-auto space-y-5`,children:[
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-1`,children:`Operational`},
+  // {fileName:X,lineNumber:71,columnNumber:9},this),
+  jsxDEV(`h1`,{className:`font-display text-2xl font-bold text-white`,children:`What-If Simulator`},
+  // {fileName:X,lineNumber:72,columnNumber:9},this),
+  jsxDEV(`p`,{className:`text-sm text-[#4A6080] mt-1`,children:`Explore how changing railway conditions could affect future ETA.`},
+  // {fileName:X,lineNumber:73,columnNumber:9},this),
+  jsxDEV(`div`,{className:`inline-block mt-2 text-[10px] font-data text-[#F59E0B] bg-[#F59E0B]/10 border border-[#F59E0B]/20 rounded px-2 py-1`,children:`Simulation only — no commands are sent to railway control systems.`},
+  // {fileName:X,lineNumber:74,columnNumber:9},this)]},
+  // {fileName:X,lineNumber:70,columnNumber:7},this),
+  jsxDEV(`div`,{className:`grid grid-cols-1 lg:grid-cols-2 gap-5`,children:[
+  jsxDEV(qB,{className:`p-6`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-5`,children:`Scenario Parameters`},
+  // {fileName:X,lineNumber:82,columnNumber:11},this),
+  jsxDEV(`div`,{className:`space-y-6`,children:UB.map(n=>{
+let r=e[n.id],i=(r-n.min)/(n.max-n.min)*100;return
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between mb-2`,children:[
+  jsxDEV(`label`,{className:`text-sm text-[#B8D0E8]`,children:n.label},
+  // {fileName:X,lineNumber:90,columnNumber:21},this),
+  jsxDEV(`span`,{className:`font-data text-sm text-[#3B82F6] font-semibold`,children:[r,n.unit]},
+  // {fileName:X,lineNumber:91,columnNumber:21},this)]},
+  // {fileName:X,lineNumber:89,columnNumber:19},this),
+  jsxDEV(`div`,{className:`relative`,children:
+  jsxDEV(`input`,{type:`range`,min:n.min,max:n.max,value:r,onChange:e=>t(t=>({...t,[n.id]:Number(e.target.value)})),className:`w-full h-1.5 rounded-full appearance-none cursor-pointer`,style:{background:`linear-gradient(to right, #3B82F6 0%, #3B82F6 ${i}%, #1E3354 ${i}%, #1E3354 100%)`,outline:`none`}},
+  // {fileName:X,lineNumber:94,columnNumber:21},this)},
+  // {fileName:X,lineNumber:93,columnNumber:19},this),
+  jsxDEV(`div`,{className:`flex justify-between text-[10px] text-[#2A4470] font-data mt-1`,children:[
+  jsxDEV(`span`,{children:[n.min,n.unit]},
+  // {fileName:X,lineNumber:108,columnNumber:21},this),
+  jsxDEV(`span`,{children:[n.max,n.unit]},
+  // {fileName:X,lineNumber:109,columnNumber:21},this)]},
+  // {fileName:X,lineNumber:107,columnNumber:19},this)]},n.id,!0,{fileName:X,lineNumber:88,columnNumber:17},this)})},
+  // {fileName:X,lineNumber:83,columnNumber:11},this),
+  jsxDEV(`button`,{onClick:()=>{a(KB(e)),r(!0)},className:`mt-6 w-full py-3 bg-[#3B82F6] hover:bg-[#2563EB] text-white font-medium rounded text-sm transition-all duration-200 tracking-wide`,children:`Run Scenario`},
+  // {fileName:X,lineNumber:115,columnNumber:11},this)]},
+  // {fileName:X,lineNumber:81,columnNumber:9},this),
+  jsxDEV(`div`,{className:`space-y-4`,children:[
+  jsxDEV(qB,{className:`p-6`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-4`,children:`Scenario Result`},
+  // {fileName:X,lineNumber:126,columnNumber:13},this),n?
+  jsxDEV(S.Fragment,{children:[
+  jsxDEV(`div`,{className:`grid grid-cols-3 gap-3 mb-5`,children:[{label:`Baseline ETA`,value:`19:19`,color:`#7A95B0`},{label:`Scenario ETA`,value:c,color:`#EF4444`},{label:`Additional Delay`,value:`+${o} min`,color:`#F59E0B`}].map(e=>
+  jsxDEV(`div`,{className:`bg-[#112035] rounded-lg p-3 text-center`,children:[
+  jsxDEV(`div`,{className:`text-[10px] text-[#4A6080] mb-1 font-data`,children:e.label},
+  // {fileName:X,lineNumber:138,columnNumber:23},this),
+  jsxDEV(`div`,{className:`font-data font-bold text-lg`,style:{color:e.color},children:e.value},
+  // {fileName:X,lineNumber:139,columnNumber:23},this)]},e.label,!0,{fileName:X,lineNumber:137,columnNumber:21},this))},
+  // {fileName:X,lineNumber:131,columnNumber:17},this),
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-3`,children:`Station-by-Station Ripple Effect`},
+  // {fileName:X,lineNumber:145,columnNumber:17},this),
+  jsxDEV(`div`,{className:`space-y-2`,children:WB.map((e,t)=>
+  jsxDEV(`div`,{className:`flex items-center gap-3`,children:[
+  jsxDEV(`div`,{className:`text-xs text-[#7A95B0] w-24`,children:e},
+  // {fileName:X,lineNumber:149,columnNumber:23},this),
+  jsxDEV(`div`,{className:`flex-1 bg-[#112035] rounded-full h-1.5`,children:
+  jsxDEV(`div`,{className:`h-1.5 rounded-full bg-[#EF4444] transition-all duration-500`,style:{width:`${i[t]/20*100}%`}},
+  // {fileName:X,lineNumber:151,columnNumber:25},this)},
+  // {fileName:X,lineNumber:150,columnNumber:23},this),
+  jsxDEV(`div`,{className:`font-data text-xs text-[#EF4444] w-10 text-right font-semibold`,children:[`+`,i[t]]},
+  // {fileName:X,lineNumber:156,columnNumber:23},this)]},e,!0,{fileName:X,lineNumber:148,columnNumber:21},this))},
+  // {fileName:X,lineNumber:146,columnNumber:17},this)]},void 0,!0):
+  jsxDEV(`div`,{className:`text-center py-8 text-[#2A4470] text-sm`,children:`Adjust parameters and click "Run Scenario"`},
+  // {fileName:X,lineNumber:128,columnNumber:15},this)]},
+  // {fileName:X,lineNumber:125,columnNumber:11},this),n&&
+  jsxDEV(qB,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-3`,children:`Baseline vs. Scenario Comparison`},
+  // {fileName:X,lineNumber:167,columnNumber:15},this),
+  jsxDEV(vu,{width:`100%`,height:180,children:
+  jsxDEV(SB,{data:l,margin:{top:4,right:8,left:-20,bottom:0},children:[
+  jsxDEV(sP,{strokeDasharray:`3 3`,stroke:`#112035`},
+  // {fileName:X,lineNumber:170,columnNumber:19},this),
+  jsxDEV(mR,{dataKey:`name`,tick:{fontSize:10,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1},
+  // {fileName:X,lineNumber:171,columnNumber:19},this),
+  jsxDEV(kR,{tick:{fontSize:10,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1,unit:`m`},
+  // {fileName:X,lineNumber:172,columnNumber:19},this),
+  jsxDEV(LD,{contentStyle:{backgroundColor:`#0C1526`,border:`1px solid #1A2840`,borderRadius:4,fontFamily:`JetBrains Mono`,fontSize:11},labelStyle:{color:`#7A95B0`},itemStyle:{color:`#B8D0E8`}},
+  // {fileName:X,lineNumber:173,columnNumber:19},this),
+  jsxDEV(Md,{wrapperStyle:{fontSize:11,fontFamily:`JetBrains Mono`,color:`#4A6080`}},
+  // {fileName:X,lineNumber:178,columnNumber:19},this),
+  jsxDEV(mL,{dataKey:`baseline`,name:`Baseline`,fill:`#2A4470`,radius:[2,2,0,0]},
+  // {fileName:X,lineNumber:179,columnNumber:19},this),
+  jsxDEV(mL,{dataKey:`scenario`,name:`Scenario`,fill:`#EF4444`,radius:[2,2,0,0]},
+  // {fileName:X,lineNumber:180,columnNumber:19},this)]},
+  // {fileName:X,lineNumber:169,columnNumber:17},this)},
+  // {fileName:X,lineNumber:168,columnNumber:15},this)]},
+  // {fileName:X,lineNumber:166,columnNumber:13},this)]},
+  // {fileName:X,lineNumber:124,columnNumber:9},this)]},
+  // {fileName:X,lineNumber:79,columnNumber:7},this),
+  jsxDEV(`style`,{children:`
+        input[type='range']::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #3B82F6;
+          border: 2px solid #1A2840;
+          cursor: pointer;
+        }
+        input[type='range']::-moz-range-thumb {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #3B82F6;
+          border: 2px solid #1A2840;
+          cursor: pointer;
+        }
+      `},
+  // {fileName:X,lineNumber:188,columnNumber:7},this)]},
+  // {fileName:X,lineNumber:69,columnNumber:5},this)}
+var Z=`/workspaces/default/.publishing/src/

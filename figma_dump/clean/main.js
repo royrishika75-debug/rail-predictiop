@@ -1,0 +1,1 @@
+main.tsx`;x.createRoot(document.getElementById(`root`)).render((0,S.jsxDEV)(b.StrictMode,{children:(0,S.jsxDEV)(WV,{},void 0,!1,{fileName:GV,lineNumber:8,columnNumber:5},void 0)},void 0,!1,{fileName:GV,lineNumber:7,columnNumber:3},void 0));

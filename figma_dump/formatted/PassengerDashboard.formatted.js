@@ -1,0 +1,322 @@
+pages/PassengerDashboard.tsx`,DB=[{station:`Vijayawada`,scheduled:`13:00`,predicted:`13:18`,delay:18,confidence:95},{station:`Khammam`,scheduled:`14:20`,predicted:`14:34`,delay:14,confidence:88},{station:`Warangal`,scheduled:`15:40`,predicted:`15:58`,delay:18,confidence:82},{station:`Kazipet`,scheduled:`16:15`,predicted:`16:37`,delay:22,confidence:74},{station:`Secunderabad`,scheduled:`19:00`,predicted:`19:19`,delay:19,confidence:71}],OB=DB.map(e=>({name:e.station.split(` `)[0],baseline:18,forecast:e.delay})),kB=[{factor:`Weather Impact`,value:2},{factor:`Expected Recovery`,value:-2},{factor:`Speed Restriction`,value:3},{factor:`Hist. Section Delay`,value:4},{factor:`Downstream Congestion`,value:7}],AB=[{station:`Current`,delay:30},{station:`Khammam`,delay:27},{station:`Warangal`,delay:23},{station:`Kazipet`,delay:21},{station:`Destination`,delay:19}],jB=[{section:`Vijayawada–Khammam`,level:`HIGH`,impact:`+5 min`,color:`#EF4444`,pct:85},{section:`Khammam–Warangal`,level:`MEDIUM`,impact:`+2 min`,color:`#F59E0B`,pct:52},{section:`Warangal–Kazipet`,level:`LOW`,impact:`+0 min`,color:`#10B981`,pct:18}];
+
+function MB({children:e,className:t=``}){return
+  jsxDEV(`div`,{className:`bg-[#0C1526] border border-[#1A2840] rounded-lg ${t}`,children:e},
+  // {fileName:J,lineNumber:47,columnNumber:5},this)}
+
+function NB({delay:e}){return
+  jsxDEV(`span`,{className:`font-data text-sm font-semibold`,style:{color:e<=5?`#10B981`:e<=15?`#F59E0B`:`#EF4444`},children:[e>0?`+${e}`:e,` min`]},
+  // {fileName:J,lineNumber:56,columnNumber:5},this)}
+
+function PB({value:e}){
+let t=e>85?`#10B981`:e>70?`#F59E0B`:`#EF4444`;return
+  jsxDEV(`div`,{className:`flex items-center gap-2`,children:[
+  jsxDEV(`div`,{className:`flex-1 bg-[#112035] rounded-full h-1.5`,children:
+  jsxDEV(`div`,{className:`h-1.5 rounded-full transition-all`,style:{width:`${e}%`,backgroundColor:t}},
+  // {fileName:J,lineNumber:67,columnNumber:9},this)},
+  // {fileName:J,lineNumber:66,columnNumber:7},this),
+  jsxDEV(`span`,{className:`font-data text-xs text-[#4A6080]`,children:[e,`%`]},
+  // {fileName:J,lineNumber:69,columnNumber:7},this)]},
+  // {fileName:J,lineNumber:65,columnNumber:5},this)}
+var FB=({active:e,payload:t,label:n})=>e&&t?.length?
+  jsxDEV(`div`,{className:`bg-[#0C1526] border border-[#1A2840] rounded px-3 py-2 text-xs font-data shadow-xl`,children:[
+  jsxDEV(`div`,{className:`text-[#7A95B0] mb-1`,children:n},
+  // {fileName:J,lineNumber:78,columnNumber:9},void 0),t.map(e=>
+  jsxDEV(`div`,{style:{color:e.color},children:[e.name,`: +`,e.value,` min`]},e.dataKey,!0,{fileName:J,lineNumber:80,columnNumber:11},void 0))]},
+  // {fileName:J,lineNumber:77,columnNumber:7},void 0):null;
+
+function IB(){let[e,t]=(0,b.useState)(!1),[n,r]=(0,b.useState)(!1);return
+  jsxDEV(`div`,{className:`p-6 space-y-6 max-w-7xl mx-auto`,children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between`,children:[
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#3B82F6] uppercase tracking-widest mb-1`,children:`Currently Tracking`},
+  // {fileName:J,lineNumber:99,columnNumber:11},this),
+  jsxDEV(`h1`,{className:`font-display text-2xl font-bold text-white`,children:`12625 — Kerala Express`},
+  // {fileName:J,lineNumber:100,columnNumber:11},this),
+  jsxDEV(`div`,{className:`text-sm text-[#4A6080] mt-0.5`,children:`Mumbai LTT → Thiruvananthapuram Central · 47 stations`},
+  // {fileName:J,lineNumber:101,columnNumber:11},this)]},
+  // {fileName:J,lineNumber:98,columnNumber:9},this),
+  jsxDEV(`div`,{className:`flex items-center gap-2 text-xs font-data text-[#F59E0B]`,children:[
+  jsxDEV(`span`,{className:`w-2 h-2 rounded-full bg-[#F59E0B] pulse-dot inline-block`},
+  // {fileName:J,lineNumber:104,columnNumber:11},this),`Running Late · Updated 2 min ago`]},
+  // {fileName:J,lineNumber:103,columnNumber:9},this)]},
+  // {fileName:J,lineNumber:97,columnNumber:7},this),
+  jsxDEV(`div`,{className:`grid grid-cols-1 lg:grid-cols-3 gap-4`,children:[
+  jsxDEV(MB,{className:`lg:col-span-2 p-5`,children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between mb-4`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest`,children:`Live Train Status`},
+  // {fileName:J,lineNumber:114,columnNumber:13},this),
+  jsxDEV(`span`,{className:`text-[10px] bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20 font-data px-2 py-0.5 rounded`,children:`RUNNING LATE`},
+  // {fileName:J,lineNumber:115,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:113,columnNumber:11},this),
+  jsxDEV(`div`,{className:`grid grid-cols-2 md:grid-cols-4 gap-4`,children:[{label:`Current Station`,value:`Vijayawada Jn`,sub:`Platform 3`,color:`white`},{label:`Current Delay`,value:`+18 min`,sub:`Since Wadi`,color:`#F59E0B`},{label:`Next Station`,value:`Khammam`,sub:`ETA 14:34`,color:`white`},{label:`Destination ETA`,value:`19:19`,sub:`Secunderabad`,color:`white`}].map(e=>
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`text-[11px] text-[#4A6080] mb-1 font-data`,children:e.label},
+  // {fileName:J,lineNumber:127,columnNumber:17},this),
+  jsxDEV(`div`,{className:`font-display font-semibold text-lg`,style:{color:e.color},children:e.value},
+  // {fileName:J,lineNumber:128,columnNumber:17},this),
+  jsxDEV(`div`,{className:`text-xs text-[#3B5E8C]`,children:e.sub},
+  // {fileName:J,lineNumber:129,columnNumber:17},this)]},e.label,!0,{fileName:J,lineNumber:126,columnNumber:15},this))},
+  // {fileName:J,lineNumber:119,columnNumber:11},this),
+  jsxDEV(`div`,{className:`mt-5`,children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between text-[10px] font-data text-[#3B5E8C] mb-2`,children:[
+  jsxDEV(`span`,{children:`Mumbai LTT`},
+  // {fileName:J,lineNumber:136,columnNumber:15},this),
+  jsxDEV(`span`,{children:`Journey Progress — 62%`},
+  // {fileName:J,lineNumber:137,columnNumber:15},this),
+  jsxDEV(`span`,{children:`Thiruvananthapuram`},
+  // {fileName:J,lineNumber:138,columnNumber:15},this)]},
+  // {fileName:J,lineNumber:135,columnNumber:13},this),
+  jsxDEV(`div`,{className:`bg-[#112035] rounded-full h-2`,children:
+  jsxDEV(`div`,{className:`bg-[#3B82F6] h-2 rounded-full`,style:{width:`62%`}},
+  // {fileName:J,lineNumber:141,columnNumber:15},this)},
+  // {fileName:J,lineNumber:140,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:134,columnNumber:11},this)]},
+  // {fileName:J,lineNumber:112,columnNumber:9},this),
+  jsxDEV(MB,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between mb-1`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest`,children:`Arrival Confidence Window`},
+  // {fileName:J,lineNumber:149,columnNumber:13},this),
+  jsxDEV(`button`,{onMouseEnter:()=>r(!0),onMouseLeave:()=>r(!1),className:`text-[#2A4470] hover:text-[#3B82F6] text-xs transition-colors relative`,children:[`ⓘ`,n&&
+  jsxDEV(`div`,{className:`absolute right-0 top-5 w-56 bg-[#112035] border border-[#1A2840] rounded p-2 text-[10px] text-[#7A95B0] leading-relaxed z-20 text-left shadow-xl`,children:`P10/P50/P90 represent predicted arrival-time quantiles. They describe forecast uncertainty and are not arrival guarantees.`},
+  // {fileName:J,lineNumber:157,columnNumber:17},this)]},
+  // {fileName:J,lineNumber:150,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:148,columnNumber:11},this),
+  jsxDEV(`div`,{className:`text-xs text-[#3B5E8C] mb-4`,children:[`Most likely arrival: `,
+  jsxDEV(`span`,{className:`text-white font-data`,children:`19:19`},
+  // {fileName:J,lineNumber:163,columnNumber:77},this)]},
+  // {fileName:J,lineNumber:163,columnNumber:11},this),
+  jsxDEV(`div`,{className:`relative mb-5`,children:[
+  jsxDEV(`div`,{className:`bg-[#112035] rounded h-3`,children:[
+  jsxDEV(`div`,{className:`absolute left-[20%] right-[20%] top-0 h-3 bg-[#3B82F6]/20 rounded`},
+  // {fileName:J,lineNumber:168,columnNumber:15},this),
+  jsxDEV(`div`,{className:`absolute left-[35%] right-[35%] top-0 h-3 bg-[#3B82F6]/40 rounded`},
+  // {fileName:J,lineNumber:169,columnNumber:15},this)]},
+  // {fileName:J,lineNumber:167,columnNumber:13},this),
+  jsxDEV(`div`,{className:`flex justify-between mt-2`,children:[{label:`P10`,time:`19:10`,color:`#10B981`},{label:`P50`,time:`19:19`,color:`#3B82F6`},{label:`P90`,time:`19:34`,color:`#F59E0B`}].map(e=>
+  jsxDEV(`div`,{className:`text-center`,children:[
+  jsxDEV(`div`,{className:`font-data text-xs font-semibold`,style:{color:e.color},children:e.time},
+  // {fileName:J,lineNumber:178,columnNumber:19},this),
+  jsxDEV(`div`,{className:`text-[10px] text-[#4A6080]`,children:e.label},
+  // {fileName:J,lineNumber:179,columnNumber:19},this)]},e.label,!0,{fileName:J,lineNumber:177,columnNumber:17},this))},
+  // {fileName:J,lineNumber:171,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:166,columnNumber:11},this),
+  jsxDEV(`div`,{className:`text-[11px] text-[#4A6080] border-t border-[#1A2840] pt-3`,children:[`Expected window: `,
+  jsxDEV(`span`,{className:`text-[#7A95B0] font-data`,children:`19:10 – 19:34`},
+  // {fileName:J,lineNumber:186,columnNumber:30},this)]},
+  // {fileName:J,lineNumber:185,columnNumber:11},this)]},
+  // {fileName:J,lineNumber:147,columnNumber:9},this)]},
+  // {fileName:J,lineNumber:110,columnNumber:7},this),
+  jsxDEV(MB,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between mb-5`,children:[
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-1`,children:`AI Future ETA Forecast`},
+  // {fileName:J,lineNumber:195,columnNumber:13},this),
+  jsxDEV(`div`,{className:`font-display font-semibold text-white`,children:`Upcoming Station Predictions`},
+  // {fileName:J,lineNumber:196,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:194,columnNumber:11},this),
+  jsxDEV(`span`,{className:`text-[10px] font-data text-[#3B82F6] border border-[#1E3354] rounded px-2 py-1`,children:`MODEL V2 · LIVE`},
+  // {fileName:J,lineNumber:198,columnNumber:11},this)]},
+  // {fileName:J,lineNumber:193,columnNumber:9},this),
+  jsxDEV(`div`,{className:`flex items-start gap-0 mb-6 overflow-x-auto pb-2`,children:DB.map((e,t)=>
+  jsxDEV(`div`,{className:`flex flex-col items-center flex-shrink-0`,children:[
+  jsxDEV(`div`,{className:`flex flex-col items-center ${t===0?`opacity-60`:``}`,children:[
+  jsxDEV(`div`,{className:`w-3 h-3 rounded-full border-2 ${t===0?`bg-[#3B82F6] border-[#3B82F6]`:e.delay>20?`bg-[#EF4444] border-[#EF4444]`:e.delay>10?`bg-[#F59E0B] border-[#F59E0B]`:`bg-[#10B981] border-[#10B981]`}`},
+  // {fileName:J,lineNumber:206,columnNumber:17},this),t<DB.length-1&&
+  jsxDEV(`div`,{className:`w-16 h-0.5 bg-[#1A2840] mt-1.5 -mb-1.5`,style:{marginLeft:`100%`}},
+  // {fileName:J,lineNumber:212,columnNumber:19},this)]},
+  // {fileName:J,lineNumber:205,columnNumber:15},this),
+  jsxDEV(`div`,{className:`mt-2 text-center min-w-[72px] px-1`,children:[
+  jsxDEV(`div`,{className:`text-[11px] font-medium ${t===0?`text-[#3B82F6]`:`text-[#B8D0E8]`}`,children:e.station.split(` `)[0]},
+  // {fileName:J,lineNumber:216,columnNumber:17},this),t===0&&
+  jsxDEV(`div`,{className:`text-[10px] text-[#3B82F6] font-data`,children:`CURRENT`},
+  // {fileName:J,lineNumber:219,columnNumber:29},this)]},
+  // {fileName:J,lineNumber:215,columnNumber:15},this)]},e.station,!0,{fileName:J,lineNumber:204,columnNumber:13},this))},
+  // {fileName:J,lineNumber:202,columnNumber:9},this),
+  jsxDEV(`div`,{className:`overflow-x-auto mb-6`,children:
+  jsxDEV(`table`,{className:`w-full text-sm`,children:[
+  jsxDEV(`thead`,{children:
+  jsxDEV(`tr`,{className:`border-b border-[#1A2840]`,children:[`Station`,`Scheduled`,`Predicted`,`Delay`,`Confidence`].map(e=>
+  jsxDEV(`th`,{className:`text-left py-2 px-3 text-[11px] font-data text-[#4A6080] uppercase tracking-wider font-medium`,children:e},e,!1,{fileName:J,lineNumber:231,columnNumber:19},this))},
+  // {fileName:J,lineNumber:229,columnNumber:15},this)},
+  // {fileName:J,lineNumber:228,columnNumber:13},this),
+  jsxDEV(`tbody`,{children:DB.slice(1).map((e,t)=>
+  jsxDEV(`tr`,{className:`border-b border-[#112035] hover:bg-[#112035] transition-colors`,children:[
+  jsxDEV(`td`,{className:`py-3 px-3 text-[#B8D0E8] font-medium`,children:e.station},
+  // {fileName:J,lineNumber:238,columnNumber:19},this),
+  jsxDEV(`td`,{className:`py-3 px-3 font-data text-[#4A6080]`,children:e.scheduled},
+  // {fileName:J,lineNumber:239,columnNumber:19},this),
+  jsxDEV(`td`,{className:`py-3 px-3 font-data text-white`,children:e.predicted},
+  // {fileName:J,lineNumber:240,columnNumber:19},this),
+  jsxDEV(`td`,{className:`py-3 px-3`,children:
+  jsxDEV(NB,{delay:e.delay},
+  // {fileName:J,lineNumber:241,columnNumber:45},this)},
+  // {fileName:J,lineNumber:241,columnNumber:19},this),
+  jsxDEV(`td`,{className:`py-3 px-3 w-36`,children:
+  jsxDEV(PB,{value:e.confidence},
+  // {fileName:J,lineNumber:242,columnNumber:50},this)},
+  // {fileName:J,lineNumber:242,columnNumber:19},this)]},e.station,!0,{fileName:J,lineNumber:237,columnNumber:17},this))},
+  // {fileName:J,lineNumber:235,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:227,columnNumber:11},this)},
+  // {fileName:J,lineNumber:226,columnNumber:9},this),
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] mb-3`,children:`Delay Evolution — Baseline vs. RailPredict Forecast`},
+  // {fileName:J,lineNumber:251,columnNumber:11},this),
+  jsxDEV(vu,{width:`100%`,height:180,children:
+  jsxDEV(bB,{data:OB,margin:{top:4,right:16,left:-20,bottom:0},children:[
+  jsxDEV(sP,{strokeDasharray:`3 3`,stroke:`#112035`},
+  // {fileName:J,lineNumber:254,columnNumber:15},this),
+  jsxDEV(mR,{dataKey:`name`,tick:{fontSize:11,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1},
+  // {fileName:J,lineNumber:255,columnNumber:15},this),
+  jsxDEV(kR,{tick:{fontSize:11,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1,unit:` min`},
+  // {fileName:J,lineNumber:256,columnNumber:15},this),
+  jsxDEV(LD,{content:
+  jsxDEV(FB,{},
+  // {fileName:J,lineNumber:257,columnNumber:33},this)},
+  // {fileName:J,lineNumber:257,columnNumber:15},this),
+  jsxDEV(Md,{wrapperStyle:{fontSize:11,fontFamily:`JetBrains Mono`,color:`#4A6080`}},
+  // {fileName:J,lineNumber:258,columnNumber:15},this),
+  jsxDEV(dF,{type:`monotone`,dataKey:`baseline`,stroke:`#2A4470`,strokeWidth:2,strokeDasharray:`5 3`,dot:!1,name:`Baseline`},
+  // {fileName:J,lineNumber:261,columnNumber:15},this),
+  jsxDEV(dF,{type:`monotone`,dataKey:`forecast`,stroke:`#3B82F6`,strokeWidth:2.5,dot:{fill:`#3B82F6`,r:3},name:`RailPredict`},
+  // {fileName:J,lineNumber:262,columnNumber:15},this)]},
+  // {fileName:J,lineNumber:253,columnNumber:13},this)},
+  // {fileName:J,lineNumber:252,columnNumber:11},this)]},
+  // {fileName:J,lineNumber:250,columnNumber:9},this)]},
+  // {fileName:J,lineNumber:192,columnNumber:7},this),
+  jsxDEV(`div`,{className:`grid grid-cols-1 lg:grid-cols-2 gap-4`,children:[
+  jsxDEV(MB,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between mb-4`,children:[
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-1`,children:`Why is the ETA changing?`},
+  // {fileName:J,lineNumber:274,columnNumber:15},this),
+  jsxDEV(`div`,{className:`font-display font-semibold text-white`,children:`Delay Contribution Factors`},
+  // {fileName:J,lineNumber:275,columnNumber:15},this)]},
+  // {fileName:J,lineNumber:273,columnNumber:13},this),
+  jsxDEV(`button`,{onClick:()=>t(!e),className:`text-xs text-[#3B82F6] hover:text-[#60A5FA] border border-[#1E3354] hover:border-[#3B82F6] rounded px-2 py-1 transition-all font-data`,children:e?`Less Detail`:`View Model Explanation`},
+  // {fileName:J,lineNumber:277,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:272,columnNumber:11},this),
+  jsxDEV(`div`,{className:`space-y-2 mb-4`,children:kB.map(e=>{
+let t=e.value>0,n=Math.abs(e.value)/7*100;return
+  jsxDEV(`div`,{className:`flex items-center gap-3`,children:[
+  jsxDEV(`div`,{className:`text-xs text-[#7A95B0] w-40 flex-shrink-0`,children:e.factor},
+  // {fileName:J,lineNumber:292,columnNumber:19},this),
+  jsxDEV(`div`,{className:`flex-1 flex items-center gap-2`,children:[
+  jsxDEV(`div`,{className:`flex-1 bg-[#112035] rounded-full h-2 overflow-hidden`,children:
+  jsxDEV(`div`,{className:`h-2 rounded-full`,style:{width:`${Math.min(n,100)}%`,backgroundColor:t?`#EF4444`:`#10B981`}},
+  // {fileName:J,lineNumber:295,columnNumber:23},this)},
+  // {fileName:J,lineNumber:294,columnNumber:21},this),
+  jsxDEV(`span`,{className:`font-data text-xs w-14 text-right`,style:{color:t?`#EF4444`:`#10B981`},children:[t?`+`:``,e.value,` min`]},
+  // {fileName:J,lineNumber:303,columnNumber:21},this)]},
+  // {fileName:J,lineNumber:293,columnNumber:19},this)]},e.factor,!0,{fileName:J,lineNumber:291,columnNumber:17},this)})},
+  // {fileName:J,lineNumber:286,columnNumber:11},this),
+  jsxDEV(`div`,{className:`flex items-center justify-between pt-3 border-t border-[#1A2840]`,children:[
+  jsxDEV(`div`,{className:`text-xs text-[#4A6080]`,children:`Total predicted change`},
+  // {fileName:J,lineNumber:313,columnNumber:13},this),
+  jsxDEV(`div`,{className:`font-data font-semibold text-[#F59E0B]`,children:`+14 min`},
+  // {fileName:J,lineNumber:314,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:312,columnNumber:11},this),e&&
+  jsxDEV(`div`,{className:`mt-4 p-3 bg-[#112035] rounded border border-[#1A2840]`,children:
+  jsxDEV(`div`,{className:`text-[10px] text-[#3B5E8C] font-data leading-relaxed`,children:`SHAP-style feature attribution · Feature contribution explains the model prediction; it does not imply causation. Values represent expected marginal contribution to delay prediction.`},
+  // {fileName:J,lineNumber:319,columnNumber:15},this)},
+  // {fileName:J,lineNumber:318,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:271,columnNumber:9},this),
+  jsxDEV(MB,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-1`,children:`Delay Recovery Forecast`},
+  // {fileName:J,lineNumber:328,columnNumber:11},this),
+  jsxDEV(`div`,{className:`font-display font-semibold text-white mb-4`,children:`Predicted Delay Evolution`},
+  // {fileName:J,lineNumber:329,columnNumber:11},this),
+  jsxDEV(`div`,{className:`grid grid-cols-3 gap-3 mb-4`,children:[{label:`Current Delay`,value:`+30 min`,color:`#EF4444`},{label:`Expected Recovery`,value:`−11 min`,color:`#10B981`},{label:`Destination Delay`,value:`+19 min`,color:`#F59E0B`}].map(e=>
+  jsxDEV(`div`,{className:`bg-[#112035] rounded p-3`,children:[
+  jsxDEV(`div`,{className:`text-[10px] text-[#4A6080] mb-1 font-data`,children:e.label},
+  // {fileName:J,lineNumber:338,columnNumber:17},this),
+  jsxDEV(`div`,{className:`font-data font-semibold text-base`,style:{color:e.color},children:e.value},
+  // {fileName:J,lineNumber:339,columnNumber:17},this)]},e.label,!0,{fileName:J,lineNumber:337,columnNumber:15},this))},
+  // {fileName:J,lineNumber:331,columnNumber:11},this),
+  jsxDEV(vu,{width:`100%`,height:140,children:
+  jsxDEV(EB,{data:AB,margin:{top:4,right:8,left:-28,bottom:0},children:[
+  jsxDEV(`defs`,{children:
+  jsxDEV(`linearGradient`,{id:`recovGrad`,x1:`0`,y1:`0`,x2:`0`,y2:`1`,children:[
+  jsxDEV(`stop`,{offset:`5%`,stopColor:`#10B981`,stopOpacity:.3},
+  // {fileName:J,lineNumber:348,columnNumber:19},this),
+  jsxDEV(`stop`,{offset:`95%`,stopColor:`#10B981`,stopOpacity:0},
+  // {fileName:J,lineNumber:349,columnNumber:19},this)]},
+  // {fileName:J,lineNumber:347,columnNumber:17},this)},
+  // {fileName:J,lineNumber:346,columnNumber:15},this),
+  jsxDEV(sP,{strokeDasharray:`3 3`,stroke:`#112035`},
+  // {fileName:J,lineNumber:352,columnNumber:15},this),
+  jsxDEV(mR,{dataKey:`station`,tick:{fontSize:10,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1},
+  // {fileName:J,lineNumber:353,columnNumber:15},this),
+  jsxDEV(kR,{tick:{fontSize:10,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1},
+  // {fileName:J,lineNumber:354,columnNumber:15},this),
+  jsxDEV(LD,{content:({active:e,payload:t,label:n})=>e&&t?.length?
+  jsxDEV(`div`,{className:`bg-[#0C1526] border border-[#1A2840] rounded px-2 py-1 text-xs font-data`,children:[
+  jsxDEV(`div`,{className:`text-[#7A95B0]`,children:n},
+  // {fileName:J,lineNumber:357,columnNumber:19},this),
+  jsxDEV(`div`,{className:`text-[#10B981]`,children:[`+`,t[0].value,` min delay`]},
+  // {fileName:J,lineNumber:358,columnNumber:19},this)]},
+  // {fileName:J,lineNumber:356,columnNumber:17},this):null},
+  // {fileName:J,lineNumber:355,columnNumber:15},this),
+  jsxDEV(iI,{type:`monotone`,dataKey:`delay`,stroke:`#10B981`,fill:`url(#recovGrad)`,strokeWidth:2,dot:{fill:`#10B981`,r:3}},
+  // {fileName:J,lineNumber:361,columnNumber:15},this)]},
+  // {fileName:J,lineNumber:345,columnNumber:13},this)},
+  // {fileName:J,lineNumber:344,columnNumber:11},this),
+  jsxDEV(`div`,{className:`mt-3 text-[10px] text-[#3B5E8C] font-data border-t border-[#1A2840] pt-3`,children:`RailPredict estimates potential delay recovery using historical section running behaviour and current operational conditions. Recovery represents predicted delay reduction — not unsafe speed increase.`},
+  // {fileName:J,lineNumber:365,columnNumber:11},this)]},
+  // {fileName:J,lineNumber:327,columnNumber:9},this)]},
+  // {fileName:J,lineNumber:269,columnNumber:7},this),
+  jsxDEV(MB,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-1`,children:`Downstream Network Conditions`},
+  // {fileName:J,lineNumber:373,columnNumber:9},this),
+  jsxDEV(`div`,{className:`font-display font-semibold text-white mb-4`,children:`Route Congestion Forecast`},
+  // {fileName:J,lineNumber:374,columnNumber:9},this),
+  jsxDEV(`div`,{className:`overflow-x-auto`,children:
+  jsxDEV(`table`,{className:`w-full text-sm`,children:[
+  jsxDEV(`thead`,{children:
+  jsxDEV(`tr`,{className:`border-b border-[#1A2840]`,children:[`Section`,`Congestion Level`,`Impact`,`Status`].map(e=>
+  jsxDEV(`th`,{className:`text-left py-2 px-3 text-[11px] font-data text-[#4A6080] uppercase tracking-wider font-medium`,children:e},e,!1,{fileName:J,lineNumber:381,columnNumber:19},this))},
+  // {fileName:J,lineNumber:379,columnNumber:15},this)},
+  // {fileName:J,lineNumber:378,columnNumber:13},this),
+  jsxDEV(`tbody`,{children:jB.map(e=>
+  jsxDEV(`tr`,{className:`border-b border-[#112035] hover:bg-[#112035] transition-colors`,children:[
+  jsxDEV(`td`,{className:`py-3 px-3 text-[#B8D0E8]`,children:e.section},
+  // {fileName:J,lineNumber:388,columnNumber:19},this),
+  jsxDEV(`td`,{className:`py-3 px-3`,children:
+  jsxDEV(`div`,{className:`flex items-center gap-2`,children:[
+  jsxDEV(`div`,{className:`flex-1 max-w-[100px] bg-[#112035] rounded-full h-1.5`,children:
+  jsxDEV(`div`,{className:`h-1.5 rounded-full`,style:{width:`${e.pct}%`,backgroundColor:e.color}},
+  // {fileName:J,lineNumber:392,columnNumber:25},this)},
+  // {fileName:J,lineNumber:391,columnNumber:23},this),
+  jsxDEV(`span`,{className:`font-data text-xs font-semibold`,style:{color:e.color},children:e.level},
+  // {fileName:J,lineNumber:394,columnNumber:23},this)]},
+  // {fileName:J,lineNumber:390,columnNumber:21},this)},
+  // {fileName:J,lineNumber:389,columnNumber:19},this),
+  jsxDEV(`td`,{className:`py-3 px-3 font-data text-xs text-[#7A95B0]`,children:e.impact},
+  // {fileName:J,lineNumber:397,columnNumber:19},this),
+  jsxDEV(`td`,{className:`py-3 px-3`,children:
+  jsxDEV(`span`,{className:`text-[10px] font-data px-2 py-0.5 rounded border`,style:{color:e.color,borderColor:e.color+`40`,backgroundColor:e.color+`10`},children:e.level},
+  // {fileName:J,lineNumber:399,columnNumber:21},this)},
+  // {fileName:J,lineNumber:398,columnNumber:19},this)]},e.section,!0,{fileName:J,lineNumber:387,columnNumber:17},this))},
+  // {fileName:J,lineNumber:385,columnNumber:13},this)]},
+  // {fileName:J,lineNumber:377,columnNumber:11},this)},
+  // {fileName:J,lineNumber:376,columnNumber:9},this)]},
+  // {fileName:J,lineNumber:372,columnNumber:7},this),
+  jsxDEV(MB,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-4`,children:`External Conditions · Weather + Operations`},
+  // {fileName:J,lineNumber:412,columnNumber:9},this),
+  jsxDEV(`div`,{className:`grid grid-cols-2 md:grid-cols-4 gap-4`,children:[{label:`Weather`,value:`Foggy`,sub:`Visibility: Low`,impact:`+4 min`,icon:`🌫`,color:`#7A95B0`},{label:`Track Restriction`,value:`60 km/h`,sub:`Section A–B`,impact:`+3 min`,icon:`⚠`,color:`#F59E0B`},{label:`Downstream Congestion`,value:`HIGH`,sub:`Vijayawada–Khammam`,impact:`+7 min`,icon:`⬡`,color:`#EF4444`},{label:`Operational Impact Score`,value:`74 / 100`,sub:`High Risk`,impact:`+14 min total`,icon:`▲`,color:`#EF4444`}].map(e=>
+  jsxDEV(`div`,{className:`bg-[#112035] rounded-lg p-4`,children:[
+  jsxDEV(`div`,{className:`text-xl mb-2`,children:e.icon},
+  // {fileName:J,lineNumber:421,columnNumber:15},this),
+  jsxDEV(`div`,{className:`text-[11px] text-[#4A6080] mb-1 font-data`,children:e.label},
+  // {fileName:J,lineNumber:422,columnNumber:15},this),
+  jsxDEV(`div`,{className:`font-display font-semibold text-base mb-1`,style:{color:e.color},children:e.value},
+  // {fileName:J,lineNumber:423,columnNumber:15},this),
+  jsxDEV(`div`,{className:`text-xs text-[#4A6080]`,children:e.sub},
+  // {fileName:J,lineNumber:424,columnNumber:15},this),
+  jsxDEV(`div`,{className:`mt-2 text-xs font-data font-semibold`,style:{color:e.color},children:[`Impact: `,e.impact]},
+  // {fileName:J,lineNumber:425,columnNumber:15},this)]},e.label,!0,{fileName:J,lineNumber:420,columnNumber:13},this))},
+  // {fileName:J,lineNumber:413,columnNumber:9},this)]},
+  // {fileName:J,lineNumber:411,columnNumber:7},this)]},
+  // {fileName:J,lineNumber:95,columnNumber:5},this)}
+var Y=`/workspaces/default/.publishing/src/

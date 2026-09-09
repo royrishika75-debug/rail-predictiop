@@ -1,0 +1,97 @@
+pages/ModelMonitoring.tsx`;
+
+function SV({children:e,className:t=``}){return
+  jsxDEV(`div`,{className:`bg-[#0C1526] border border-[#1A2840] rounded-lg ${t}`,children:e},
+  // {fileName:xV,lineNumber:4,columnNumber:10},this)}
+var CV=[{t:`06:00`,mae:4.1},{t:`08:00`,mae:3.8},{t:`10:00`,mae:3.6},{t:`12:00`,mae:3.9},{t:`14:00`,mae:4.2},{t:`16:00`,mae:3.9},{t:`18:00`,mae:3.7},{t:`20:00`,mae:3.9}],wV=[{label:`Current MAE`,value:`3.9 min`,status:`healthy`,threshold:`< 6.0 min`},{label:`Data Drift Score`,value:`0.04`,status:`healthy`,threshold:`< 0.10`},{label:`Feature Drift`,value:`0.07`,status:`warning`,threshold:`< 0.10`},{label:`Prediction Volume`,value:`18,420 / hr`,status:`healthy`,threshold:`> 5,000 / hr`},{label:`API Latency (p95)`,value:`31 ms`,status:`healthy`,threshold:`< 100 ms`},{label:`Model Version`,value:`V2.1.3`,status:`healthy`,threshold:`Current`}],TV=[{name:`Section Running Time`,drift:.02,status:`stable`},{name:`Historical Delay`,drift:.04,status:`stable`},{name:`Downstream Congestion`,drift:.07,status:`watch`},{name:`Weather Impact`,drift:.09,status:`watch`},{name:`Junction Load`,drift:.03,status:`stable`},{name:`Signal Aspects`,drift:.01,status:`stable`}];
+
+function EV(){return
+  jsxDEV(`div`,{className:`p-6 max-w-6xl mx-auto space-y-5`,children:[
+  jsxDEV(`div`,{className:`flex items-start justify-between`,children:[
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-1`,children:`System`},
+  // {fileName:xV,lineNumber:36,columnNumber:11},this),
+  jsxDEV(`h1`,{className:`font-display text-2xl font-bold text-white`,children:`AI Model Health`},
+  // {fileName:xV,lineNumber:37,columnNumber:11},this)]},
+  // {fileName:xV,lineNumber:35,columnNumber:9},this),
+  jsxDEV(`div`,{className:`flex items-center gap-3`,children:[
+  jsxDEV(`div`,{className:`text-center`,children:[
+  jsxDEV(`div`,{className:`text-[10px] font-data text-[#4A6080] mb-1`,children:`MODEL`},
+  // {fileName:xV,lineNumber:41,columnNumber:13},this),
+  jsxDEV(`span`,{className:`font-data text-xs text-[#3B82F6] border border-[#1E3354] rounded px-2 py-1`,children:`V2.1.3`},
+  // {fileName:xV,lineNumber:42,columnNumber:13},this)]},
+  // {fileName:xV,lineNumber:40,columnNumber:11},this),
+  jsxDEV(`div`,{className:`text-center`,children:[
+  jsxDEV(`div`,{className:`text-[10px] font-data text-[#4A6080] mb-1`,children:`STATUS`},
+  // {fileName:xV,lineNumber:45,columnNumber:13},this),
+  jsxDEV(`span`,{className:`font-data text-xs text-[#10B981] border border-[#10B981]/30 rounded px-2 py-1`,children:`● HEALTHY`},
+  // {fileName:xV,lineNumber:46,columnNumber:13},this)]},
+  // {fileName:xV,lineNumber:44,columnNumber:11},this)]},
+  // {fileName:xV,lineNumber:39,columnNumber:9},this)]},
+  // {fileName:xV,lineNumber:34,columnNumber:7},this),
+  jsxDEV(`div`,{className:`grid grid-cols-2 md:grid-cols-3 gap-4`,children:wV.map(e=>{
+let t=e.status===`healthy`?`#10B981`:e.status===`warning`?`#F59E0B`:`#EF4444`;return
+  jsxDEV(SV,{className:`p-4`,children:[
+  jsxDEV(`div`,{className:`flex items-center justify-between mb-2`,children:[
+  jsxDEV(`div`,{className:`text-[11px] font-data text-[#4A6080]`,children:e.label},
+  // {fileName:xV,lineNumber:58,columnNumber:17},this),
+  jsxDEV(`span`,{className:`w-1.5 h-1.5 rounded-full`,style:{backgroundColor:t}},
+  // {fileName:xV,lineNumber:59,columnNumber:17},this)]},
+  // {fileName:xV,lineNumber:57,columnNumber:15},this),
+  jsxDEV(`div`,{className:`font-data font-bold text-xl text-white mb-1`,children:e.value},
+  // {fileName:xV,lineNumber:61,columnNumber:15},this),
+  jsxDEV(`div`,{className:`text-[10px] text-[#3B5E8C] font-data`,children:[`Threshold: `,e.threshold]},
+  // {fileName:xV,lineNumber:62,columnNumber:15},this)]},e.label,!0,{fileName:xV,lineNumber:56,columnNumber:13},this)})},
+  // {fileName:xV,lineNumber:52,columnNumber:7},this),
+  jsxDEV(SV,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-4`,children:`MAE Over Time — Today`},
+  // {fileName:xV,lineNumber:70,columnNumber:9},this),
+  jsxDEV(vu,{width:`100%`,height:160,children:
+  jsxDEV(bB,{data:CV,margin:{top:4,right:16,left:-20,bottom:0},children:[
+  jsxDEV(sP,{strokeDasharray:`3 3`,stroke:`#112035`},
+  // {fileName:xV,lineNumber:73,columnNumber:13},this),
+  jsxDEV(mR,{dataKey:`t`,tick:{fontSize:10,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1},
+  // {fileName:xV,lineNumber:74,columnNumber:13},this),
+  jsxDEV(kR,{tick:{fontSize:10,fill:`#4A6080`,fontFamily:`JetBrains Mono`},axisLine:!1,tickLine:!1,unit:`m`,domain:[3,5]},
+  // {fileName:xV,lineNumber:75,columnNumber:13},this),
+  jsxDEV(LD,{contentStyle:{backgroundColor:`#0C1526`,border:`1px solid #1A2840`,borderRadius:4,fontFamily:`JetBrains Mono`,fontSize:11},labelStyle:{color:`#7A95B0`}},
+  // {fileName:xV,lineNumber:76,columnNumber:13},this),
+  jsxDEV(dF,{type:`monotone`,dataKey:`mae`,stroke:`#10B981`,strokeWidth:2,dot:{fill:`#10B981`,r:3},name:`MAE`},
+  // {fileName:xV,lineNumber:80,columnNumber:13},this)]},
+  // {fileName:xV,lineNumber:72,columnNumber:11},this)},
+  // {fileName:xV,lineNumber:71,columnNumber:9},this)]},
+  // {fileName:xV,lineNumber:69,columnNumber:7},this),
+  jsxDEV(SV,{className:`p-5`,children:[
+  jsxDEV(`div`,{className:`text-xs font-data text-[#4A6080] uppercase tracking-widest mb-4`,children:`Feature Drift Monitor`},
+  // {fileName:xV,lineNumber:87,columnNumber:9},this),
+  jsxDEV(`div`,{className:`space-y-3`,children:TV.map(e=>{
+let t=e.status===`stable`?`#10B981`:e.status===`watch`?`#F59E0B`:`#EF4444`;return
+  jsxDEV(`div`,{className:`flex items-center gap-4`,children:[
+  jsxDEV(`div`,{className:`text-xs text-[#7A95B0] w-44 flex-shrink-0`,children:e.name},
+  // {fileName:xV,lineNumber:93,columnNumber:17},this),
+  jsxDEV(`div`,{className:`flex-1 bg-[#112035] rounded-full h-1.5`,children:
+  jsxDEV(`div`,{className:`h-1.5 rounded-full transition-all`,style:{width:`${e.drift*500}%`,backgroundColor:t}},
+  // {fileName:xV,lineNumber:95,columnNumber:19},this)},
+  // {fileName:xV,lineNumber:94,columnNumber:17},this),
+  jsxDEV(`div`,{className:`font-data text-xs w-12 text-right`,style:{color:t},children:e.drift.toFixed(2)},
+  // {fileName:xV,lineNumber:97,columnNumber:17},this),
+  jsxDEV(`span`,{className:`text-[9px] font-data px-1.5 py-0.5 rounded capitalize`,style:{color:t,backgroundColor:t+`15`},children:e.status},
+  // {fileName:xV,lineNumber:98,columnNumber:17},this)]},e.name,!0,{fileName:xV,lineNumber:92,columnNumber:15},this)})},
+  // {fileName:xV,lineNumber:88,columnNumber:9},this)]},
+  // {fileName:xV,lineNumber:86,columnNumber:7},this),
+  jsxDEV(SV,{className:`p-5 border-[#F59E0B]/30`,children:
+  jsxDEV(`div`,{className:`flex items-start gap-3`,children:[
+  jsxDEV(`span`,{className:`text-[#F59E0B] text-xl flex-shrink-0`,children:`⚠`},
+  // {fileName:xV,lineNumber:110,columnNumber:11},this),
+  jsxDEV(`div`,{children:[
+  jsxDEV(`div`,{className:`font-medium text-[#F59E0B] mb-1`,children:`Retraining Recommendation`},
+  // {fileName:xV,lineNumber:112,columnNumber:13},this),
+  jsxDEV(`div`,{className:`text-sm text-[#7A95B0] leading-relaxed`,children:`Retraining is recommended when prediction error or data distribution exceeds configured thresholds. Weather Impact and Downstream Congestion features show elevated drift scores and should be monitored.`},
+  // {fileName:xV,lineNumber:113,columnNumber:13},this),
+  jsxDEV(`div`,{className:`mt-2 text-[10px] font-data text-[#3B5E8C]`,children:`Automated retraining is not deployed. This is a manual decision-support alert.`},
+  // {fileName:xV,lineNumber:117,columnNumber:13},this)]},
+  // {fileName:xV,lineNumber:111,columnNumber:11},this)]},
+  // {fileName:xV,lineNumber:109,columnNumber:9},this)},
+  // {fileName:xV,lineNumber:108,columnNumber:7},this)]},
+  // {fileName:xV,lineNumber:33,columnNumber:5},this)}
+var DV=`/workspaces/default/.publishing/src/

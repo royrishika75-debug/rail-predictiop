@@ -1,0 +1,42 @@
+components/Sidebar.tsx`,w=[{id:`dashboard`,label:`Dashboard`,icon:`⊟`,group:`Core`},{id:`live-trains`,label:`Live Trains`,icon:`◉`,group:`Core`},{id:`eta-forecast`,label:`ETA Forecast`,icon:`◷`,group:`Forecasting`},{id:`network`,label:`Network Intelligence`,icon:`⬡`,group:`Forecasting`},{id:`simulator`,label:`What-If Simulator`,icon:`⚙`,group:`Forecasting`},{id:`propagation`,label:`Delay Propagation`,icon:`↔`,group:`Forecasting`},{id:`platform`,label:`Platform Forecast`,icon:`▣`,group:`Operations`},{id:`connection`,label:`Connection Risk`,icon:`⇌`,group:`Operations`},{id:`replay`,label:`Historical Replay`,icon:`⏮`,group:`Analysis`},{id:`model-performance`,label:`Model Performance`,icon:`▲`,group:`Analysis`},{id:`monitoring`,label:`Model Monitoring`,icon:`♥`,group:`Analysis`},{id:`pipeline`,label:`Data Pipeline`,icon:`⟶`,group:`System`},{id:`alerts`,label:`Alerts`,icon:`◬`,group:`System`},{id:`settings`,label:`Settings`,icon:`◉`,group:`System`}],T=[{id:`operations`,label:`Operations Hub`,icon:`⊟`,group:`Core`},{id:`network`,label:`Network Intelligence`,icon:`⬡`,group:`Core`},{id:`propagation`,label:`Delay Propagation`,icon:`↔`,group:`Core`},{id:`platform`,label:`Platform Forecast`,icon:`▣`,group:`Operations`},{id:`alerts`,label:`Alert Center`,icon:`◬`,group:`Operations`},{id:`simulator`,label:`What-If Simulator`,icon:`⚙`,group:`Analysis`},{id:`model-performance`,label:`Model Performance`,icon:`▲`,group:`Analysis`},{id:`monitoring`,label:`Model Monitoring`,icon:`♥`,group:`Analysis`},{id:`pipeline`,label:`Data Pipeline`,icon:`⟶`,group:`System`},{id:`settings`,label:`Settings`,icon:`◉`,group:`System`}];
+
+function E({page:e,setPage:t,view:n}){
+let r=(n===`operations`?T:w).reduce((e,t)=>{
+let n=t.group??`Other`;return(e[n]=e[n]??[]).push(t),e},{});return
+  jsxDEV(`aside`,{className:`w-56 flex-shrink-0 bg-[#0C1526] border-r border-[#1A2840] flex flex-col overflow-y-auto`,children:[
+  jsxDEV(`div`,{className:`px-4 py-5 border-b border-[#1A2840]`,children:[
+  jsxDEV(`div`,{className:`font-display font-bold text-lg tracking-widest text-white`,children:[`RAIL`,
+  jsxDEV(`span`,{className:`text-[#3B82F6]`,children:`PREDICT`},
+  // {fileName:C,lineNumber:58,columnNumber:88},this)]},
+  // {fileName:C,lineNumber:58,columnNumber:9},this),
+  jsxDEV(`div`,{className:`text-[10px] text-[#4A6080] mt-0.5 tracking-wide font-data uppercase`,children:n===`operations`?`Operations Mode`:`Passenger Mode`},
+  // {fileName:C,lineNumber:59,columnNumber:9},this)]},
+  // {fileName:C,lineNumber:57,columnNumber:7},this),
+  jsxDEV(`nav`,{className:`flex-1 py-3 px-2`,children:Object.entries(r).map(([n,r])=>
+  jsxDEV(`div`,{className:`mb-4`,children:[
+  jsxDEV(`div`,{className:`px-2 py-1 text-[9px] uppercase tracking-widest text-[#3B5E8C] font-data font-medium mb-1`,children:n},
+  // {fileName:C,lineNumber:67,columnNumber:13},this),r.map(n=>
+  jsxDEV(`button`,{onClick:()=>t(n.id),className:`w-full flex items-center gap-2.5 px-2.5 py-2 rounded text-sm transition-all duration-150 text-left mb-0.5 ${e===n.id?`bg-[#1A2F50] text-white font-medium border-l-2 border-[#3B82F6]`:`text-[#7A95B0] hover:text-[#B8D0E8] hover:bg-[#112035]`}`,children:[
+  jsxDEV(`span`,{className:`text-xs opacity-70`,children:n.icon},
+  // {fileName:C,lineNumber:80,columnNumber:19},this),
+  jsxDEV(`span`,{className:`text-[13px]`,children:n.label},
+  // {fileName:C,lineNumber:81,columnNumber:19},this)]},n.id,!0,{fileName:C,lineNumber:71,columnNumber:17},this))]},n,!0,{fileName:C,lineNumber:66,columnNumber:11},this))},
+  // {fileName:C,lineNumber:64,columnNumber:7},this),
+  jsxDEV(`div`,{className:`px-4 py-3 border-t border-[#1A2840]`,children:
+  jsxDEV(`div`,{className:`text-[10px] text-[#3B5E8C] font-data`,children:[
+  jsxDEV(`div`,{className:`flex items-center gap-1.5 mb-1`,children:[
+  jsxDEV(`span`,{className:`w-1.5 h-1.5 rounded-full bg-[#10B981] pulse-dot inline-block`},
+  // {fileName:C,lineNumber:92,columnNumber:13},this),`Live Data Stream`]},
+  // {fileName:C,lineNumber:91,columnNumber:11},this),
+  jsxDEV(`div`,{className:`flex items-center gap-1.5 mb-1`,children:[
+  jsxDEV(`span`,{className:`w-1.5 h-1.5 rounded-full bg-[#3B82F6] pulse-dot inline-block`},
+  // {fileName:C,lineNumber:96,columnNumber:13},this),`Model V2 Active`]},
+  // {fileName:C,lineNumber:95,columnNumber:11},this),
+  jsxDEV(`div`,{className:`flex items-center gap-1.5`,children:[
+  jsxDEV(`span`,{className:`w-1.5 h-1.5 rounded-full bg-[#10B981] pulse-dot inline-block`},
+  // {fileName:C,lineNumber:100,columnNumber:13},this),`API Healthy`]},
+  // {fileName:C,lineNumber:99,columnNumber:11},this)]},
+  // {fileName:C,lineNumber:90,columnNumber:9},this)},
+  // {fileName:C,lineNumber:89,columnNumber:7},this)]},
+  // {fileName:C,lineNumber:56,columnNumber:5},this)}
+var D=`/workspaces/default/.publishing/src/

@@ -1,0 +1,6 @@
+{
+  "name": "RailPredict",
+  "description": "AI-Powered dynamic railway tracking, uncertainty-aware ETA forecasting, delay propagation analysis, and platform occupancy intelligence for Indian Railways.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
