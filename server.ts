@@ -9,8 +9,7 @@ import { xgboostEtaService } from './server/xgboostEtaService';
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
-
+const PORT = Number(process.env.PORT) || 3000;
 app.use(express.json());
 
 // Clear any stale cached telemetry on server boot
